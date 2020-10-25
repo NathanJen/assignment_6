@@ -12,7 +12,7 @@ import { getFirstImage } from '../../shared/Utils'
 export default class ItemCard extends React.Component {
   render() {
     return (
-      <NavLink to="/item" className={styles.itemCard}>
+      <NavLink to='/item?id=0' className={styles.itemCard}>
         <div className={styles.heroContainer}>
           <img src={getFirstImage(this.props.item)} alt='item' className={styles.categoryImg} />
           <img src={Favorites} alt='heart-icon' className={styles.topRight} />

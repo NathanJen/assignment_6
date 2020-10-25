@@ -1,9 +1,13 @@
 // Dog Harness
-import StandardImage from '../assets/dogHarness.png'
+// import StandardImage from '../assets/dogHarness.png'
 import BlackHarness from '../assets/blackHarness.png'
 import RedHarness from '../assets/redHarness.png'
 import PurpleHarness from '../assets/purpleHarness.png'
 import PinkHarness from '../assets/pinkHarness.png'
+import Yorkie from '../assets/yorkie.png'
+import CloseUpOne from '../assets/closeup.png'
+import CloseUpTwo from '../assets/dogCloseup.png'
+import Buckle from '../assets/buckle.png'
 // Cat Harness
 import CatHarness from '../assets/catHarness.png'
 // GPS Collar
@@ -19,13 +23,19 @@ let Items = [
   "price": 20,
   "details": "Soft, stretchy, and resilient. A cushioned, lightweight harness that’s simple to secure and easy to link up with. An adjustable neck and chest for all shapes and sizes. Three leash attachment points because we all lead in different ways. Probably the smartest harness.",
   "colors": {
-    "Strawberry": StandardImage,
+    "Strawberry": PinkHarness,
     "Blackberry": BlackHarness,
     "Crazyberry": PurpleHarness,
     "Fire Orange": RedHarness,
   },
   "specs": {
-    "materials": "Soft stretch poly base, woven nylon straps, coated carbon steel D-rings."
+    "Materials": "Soft stretch poly base, woven nylon straps, coated carbon steel D-rings."
+  },
+  "closeups": {
+    "one": Yorkie,
+    "two": CloseUpOne,
+    "three": CloseUpTwo,
+    "four": Buckle,
   }
 },
 {
@@ -41,7 +51,7 @@ let Items = [
     "Fire Orange": "",
   },
   "specs": {
-    "materials": "Soft stretch poly base, woven nylon straps, coated carbon steel D-rings."
+    "Materials": "Soft stretch poly base, woven nylon straps, coated carbon steel D-rings."
   }
 },
 {
@@ -79,3 +89,4 @@ let Items = [
 ];
 
 export default Items
+

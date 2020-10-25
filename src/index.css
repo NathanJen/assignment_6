@@ -61,3 +61,17 @@
   border-radius: 10px;
   margin-right: 20px;
 }
+
+.breadcrumb {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  padding-right: 40px;
+  text-decoration: none;
+}
+
+.breadcrumb-row {
+  display: flex;
+  margin-bottom: 30px;
+}

@@ -16,7 +16,7 @@ export default class Products extends React.Component {
   render() {
     return (
       <div className='content-breadcrumb-container'>
-          <NavLink to="./" className={`${styles.breadcrumb} green`}><p><span className='gray'>&lt; </span>Home</p></NavLink>
+        <NavLink to="./" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
         <div className='category-name-container'>
           <h1 className={styles.categoryName}>Dogs</h1>
         </div>

@@ -1,0 +1,107 @@
+.CloseupRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.itemImgContainer {
+  width: 35%
+}
+
+.itemImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.itemDetailsContainer {
+  width: 60%;
+}
+
+.itemDetailName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 20px;
+}
+
+.category {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: #A7A7A7;
+}
+
+.optionName {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.sizeContainer {
+  width: 20%;
+  padding: 20px 10px;
+  border: 1px solid #A7A7A7;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.size {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.cartBtn {
+  margin-top: 40px;
+  padding: 20px;
+  border: none;
+  background-color: #96D231;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  border-radius: 30px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.colorBox {
+  width: 20%;
+}
+
+.infoContainer {
+  padding: 40px 0;
+  border-top: 1px solid #E5E5E5;
+}
+
+/* puts bottom border on last container */
+.infoContainer:last-child {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.infoMargins {
+  margin: 70px 0;
+}
+
+.body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.itemName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 10px;
+}
