@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  border-bottom: 2px solid #A7A7A7;
+}
+
+/* remove underline for header */
+header a {
+  text-decoration: none;
+}
+
+.logo {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Montserrat';
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: black;
+  text-decoration: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
