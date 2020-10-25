@@ -10,8 +10,8 @@ function Nav() {
   return (
     <nav>
       <ul className={styles.navLinks}>
-        <li><NavLink to='./'><p className={styles.navLink}>Cats</p></NavLink></li>
-        <li><NavLink to='./'><p className={styles.navLink}>Dogs</p></NavLink></li>
+        <li><NavLink to='/products'><p className={styles.navLink}>Cats</p></NavLink></li>
+        <li><NavLink to='/products'><p className={styles.navLink}>Dogs</p></NavLink></li>
       </ul>
     </nav>
   )

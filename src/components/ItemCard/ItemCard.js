@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './ItemCard.module.css'
+import { NavLink } from "react-router-dom"
 import Favorites from '../../assets/heart.png'
 import AddToCart from '../../assets/add-to-cart.png'
 import RedCircle from '../../assets/redCircle.png'
@@ -11,7 +12,7 @@ import { getFirstImage } from '../../shared/Utils'
 export default class ItemCard extends React.Component {
   render() {
     return (
-      <a className={styles.itemCard} href='./dog-harness.html'>
+      <NavLink to="/item" className={styles.itemCard}>
         <div className={styles.heroContainer}>
           <img src={getFirstImage(this.props.item)} alt='item' className={styles.categoryImg} />
           <img src={Favorites} alt='heart-icon' className={styles.topRight} />
@@ -36,7 +37,7 @@ export default class ItemCard extends React.Component {
           </div>
         </div>
         <p className={`${styles.itemPrice} green`}>{`$${this.props.item.price}`}</p>
-      </a>
+      </NavLink>
     )
   }
 }

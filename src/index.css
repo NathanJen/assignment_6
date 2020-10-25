@@ -46,6 +46,10 @@
   margin: 50px 5% 0 5%;
 }
 
+.category-name-container {
+  margin-bottom: 30px;
+}
+
 .dropdown {
   border: 1px solid #96D231;
   font-style: normal;
