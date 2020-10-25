@@ -1,0 +1,67 @@
+.itemCard {
+  width: 22%;
+  text-decoration: none;
+}
+
+/* removes padding for last card */
+.itemCard:not(:last-child) {
+  padding-right: 40px;
+}
+
+.itemName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.itemCategory {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.itemPrice {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 20px;
+}
+
+.categoryImg {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.colorCircle {
+  width: 45%;
+}
+
+.heroContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* text overlay inspiration from https://www.w3schools.com/howto/howto_css_image_text.asp */
+.topRight {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+}
+
+.bottomRight {
+  position: absolute;
+  bottom: 45px;
+  right: 16px;
+}
+
+.addToCart {
+  width: 30px;
+  height: 30px;
+}

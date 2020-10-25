@@ -1,0 +1,57 @@
+.heroContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.heroImg {
+  width: 100%;
+}
+
+.heroTxt {
+  /* positioning */
+  position: absolute;
+  bottom: 70px;
+  left: 5%;
+  /* text styling */
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 78px;
+  color: #96D231;
+}
+
+.categoryNameContainer {
+  margin-bottom: 30px;
+}
+
+.categoryName {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.categorySubname {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.categoryTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.categoryCard {
+  width: 45%;
+}
+
+.categoryImg {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}

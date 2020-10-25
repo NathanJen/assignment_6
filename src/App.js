@@ -11,7 +11,7 @@ export default class App extends React.Component {
       <div className="App">
         <Header />
         <Switch>
-          {/* <Route exact path='/' component={Home} /> */}
+          <Route exact path='/' component={Home} />
         </Switch>
         <Footer />
       </div>
