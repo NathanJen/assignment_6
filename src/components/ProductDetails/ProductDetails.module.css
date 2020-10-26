@@ -51,6 +51,10 @@
   text-align: center;
 }
 
+.sizeContainer:hover {
+  cursor: pointer;
+}
+
 .size {
   font-style: normal;
   font-weight: normal;
@@ -75,6 +79,10 @@
 
 .colorBox {
   width: 20%;
+}
+
+.colorBox:hover {
+  cursor: pointer;
 }
 
 .infoContainer {
@@ -104,4 +112,8 @@
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 10px;
+}
+
+.selected {
+  border: 2px solid #96D231;
 }

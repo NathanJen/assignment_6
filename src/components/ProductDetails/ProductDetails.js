@@ -18,11 +18,11 @@ function CloseUps ({item, photos}) {
   )
 }
 
-function ImageSection ({item}) {
+function ImageSection ({item, changeColor, selectedColor, changeSize, selectedSize}) {
   return (
     <div className='row'>
       <div className={styles.itemImgContainer}>
-        <img src={getFirstImage(item)} alt='Large Harness' className={styles.itemImg} />
+        <img src={item.colors[selectedColor]} alt='Large Harness' className={styles.itemImg} />
         <CloseUps item={item} photos={item.closeups} />
       </div>
       <div className={styles.itemDetailsContainer}>
@@ -34,16 +34,24 @@ function ImageSection ({item}) {
         <h2 className={styles.optionName}>Color:</h2>
         <div className='row'>
           {Object.keys(item.colors).map((color, i) => 
-            <div className={styles.colorBox} key={i}>
-              <img src={item.colors[color]} alt='harness colors' className={styles.itemImg} />
+            <div className={styles.colorBox} key={i} onClick={() => changeColor(color)}>
+              <img 
+                src={item.colors[color]} 
+                alt='harness colors' 
+                className={color === selectedColor ? `${styles.itemImg} ${styles.selected}` : styles.itemImg} 
+              />
             </div>)
           }
         </div>
         <h2 className={styles.optionName}>Size:</h2>
         <div className='row'>
           {sizes.map((size, i) => 
-            <div className={styles.sizeContainer} key={i}>
-              <p className={styles.size}>{size}</p>
+            <div 
+              className={size === selectedSize ? `${styles.sizeContainer} ${styles.selected}` : styles.sizeContainer}
+              key={i} 
+              onClick={() => changeSize(size)}
+            >
+              <p className={styles.size} >{size}</p>
             </div>)
           }
         </div>
@@ -77,9 +85,24 @@ export default class ProductDetails extends React.Component {
     const { id } = queryString.parse(this.props.location.search)
     this.state = {
       item: Items[id],
-      color: null,
-      size: null,
+      color: "Strawberry",
+      size: "Tiny",
     }
+
+    this.changeColor = this.changeColor.bind(this)
+    this.changeSize = this.changeSize.bind(this)
+  }
+
+  changeColor(color) {
+    this.setState({
+      color: color
+    })
+  }
+
+  changeSize(size) {
+    this.setState({
+      size: size
+    })
   }
   
   render() {
@@ -89,7 +112,13 @@ export default class ProductDetails extends React.Component {
           <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
           <NavLink to="/products" className='breadcrumb green'><p><span className='gray'>&lt; </span>Dogs</p></NavLink>
         </div>
-        <ImageSection item={this.state.item} />
+        <ImageSection 
+          item = {this.state.item} 
+          changeColor = {this.changeColor} 
+          selectedColor = {this.state.color}
+          changeSize = {this.changeSize}
+          selectedSize = {this.state.size}
+        />
         <Information item={this.state.item} />
       </div>
     )
