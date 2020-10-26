@@ -50,6 +50,13 @@
   margin-bottom: 30px;
 }
 
+.category-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+}
+
 .dropdown {
   border: 1px solid #96D231;
   font-style: normal;

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css'
-// import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import Phone from '../../assets/phone.png'
 import Email from '../../assets/email.png'
 import Facebook from '../../assets/facebook.png'
@@ -23,13 +23,13 @@ export default function Footer() {
       </div>
       <div className={styles.footerCategory}>
         <p className={`${styles.footerTitle} green`}>Products</p>
-        <a href='./dogs.html' className={styles.footerLink}>Cats</a>
-        <a href='./dogs.html' className={styles.footerLink}>Dogs</a>
+        <NavLink to='/products'><p className={styles.footerLink}>Cats</p></NavLink>
+        <NavLink to='/products'><p className={styles.footerLink}>Dogs</p></NavLink>
       </div>
       <div className={styles.footerCategory}>
         <p className={`${styles.footerTitle} green`}>Company</p>
         <p className={styles.footerLink}>About Us</p>
-        <p className={styles.footerLink}>Contact Us</p>
+        <NavLink to='/contact'><p className={styles.footerLink}>Contact Us</p></NavLink>
       </div>
       <div className={styles.footerCategory}>
         <p className={`${styles.footerTitle} green`}>Social Media</p>
