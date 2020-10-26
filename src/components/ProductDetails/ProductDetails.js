@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './ProductDetails.module.css'
 import { NavLink } from "react-router-dom"
-import { getFirstImage, sizes } from '../../shared/Utils'
+import { sizes } from '../../shared/Utils'
 import queryString from 'query-string'
 import Items from '../../shared/items'
 

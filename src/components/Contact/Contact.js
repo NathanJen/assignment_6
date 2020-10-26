@@ -3,10 +3,12 @@ import styles from './Contact.module.css'
 import PhoneIcon from '../../assets/greenPhone.png'
 import AddressIcon from '../../assets/greenPin.png'
 import EmailIcon from '../../assets/greenEmail.png'
+import { NavLink } from "react-router-dom"
 
 export default function Contact () {
   return (
     <div className='content-container'>
+      <NavLink to="./" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
       <div className='category-name-container'>
         <h1 className='category-name'>Contact Us</h1>
       </div>

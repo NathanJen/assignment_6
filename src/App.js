@@ -7,6 +7,7 @@ import Home from './components/Home/Home'
 import Products from './components/Products/Products'
 import ProductDetails from './components/ProductDetails/ProductDetails'
 import Contact from './components/Contact/Contact'
+import Orders from './components/Orders/Orders'
 
 export default class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends React.Component {
           <Route exact path='/products' component={Products} />
           <Route exact path='/item' component={ProductDetails} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/orders' component={Orders} />
         </Switch>
         <Footer />
       </div>

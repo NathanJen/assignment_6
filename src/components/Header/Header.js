@@ -24,7 +24,7 @@ function Icons() {
         <li><img src={Search} alt='search-icon' className={styles.navLink} /></li>
         <li><NavLink to='./'><img src={Favorites} alt='favorites-icon' className={styles.navLink} /></NavLink></li>
         <li><img src={Cart} alt='cart-icon' className={styles.navLink} /></li>
-        <li><img src={User} alt='account-icon' className={styles.navLink} /></li>
+        <li><NavLink to='/orders'><img src={User} alt='favorites-icon' className={styles.navLink} /></NavLink></li>
       </ul>
     </div>
   )

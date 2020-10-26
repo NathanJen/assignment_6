@@ -1,0 +1,103 @@
+.orderContainer {
+  display: flex;
+  border-top: 1px solid #E5E5E5;
+  padding: 30px 0 15px 0;
+}
+
+.orderContainer:last-child {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.imagesContainer {
+  width: 27%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 8%;
+}
+
+.image {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+.statusContainer {
+  width: 50%;
+}
+
+.orderNum {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 37px;
+  color: #96D231;
+  margin-bottom: 30px;
+}
+
+.body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 30px;
+}
+
+.statusContainer .body:last-child {
+  margin-bottom: 40px;
+}
+
+.detailsContainer {
+  width: 20%;
+  float: right;
+  margin-left: 8%;
+}
+
+.detailsCategory {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 10px
+}
+
+.detailsBtn {
+  width: 100%;
+  color: white;
+  background-color: #96D231;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.statusContainer {
+  width: 37%;
+}
+
+.statusIconContainer {
+  width: 18%;
+  text-align: center;
+}
+
+.statusIcon {
+  width: 100%;
+}
+
+.statusText {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 29px;
+  margin-top: 10px
+}
