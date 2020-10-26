@@ -38,7 +38,7 @@ export default class App extends React.Component {
         <div className="App">
           <Header />
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route path='/' component={Home} />
             <Route exact path='/products' component={Products} />
             <Route exact path='/item' component={ProductDetails} />
             <Route exact path='/contact' component={Contact} />
