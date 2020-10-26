@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom"
 import { sizes } from '../../shared/Utils'
 import queryString from 'query-string'
 import Items from '../../shared/items'
+import { CartConsumer } from '../../contexts/cart'
 
 function CloseUps ({item, photos}) {
   return (
@@ -18,7 +19,7 @@ function CloseUps ({item, photos}) {
   )
 }
 
-function ImageSection ({item, changeColor, selectedColor, changeSize, selectedSize}) {
+function ImageSection ({item, changeColor, selectedColor, changeSize, selectedSize, addToCart, state}) {
   return (
     <div className='row'>
       <div className={styles.itemImgContainer}>
@@ -55,7 +56,12 @@ function ImageSection ({item, changeColor, selectedColor, changeSize, selectedSi
             </div>)
           }
         </div>
-        <button className={styles.cartBtn}>Add to Cart</button>
+        <button 
+          className = {styles.cartBtn}
+          onClick = {() => addToCart(state)}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   )
@@ -107,20 +113,26 @@ export default class ProductDetails extends React.Component {
   
   render() {
     return (
-      <div className='content-breadcrumb-container'>
-        <div className='breadcrumb-row'>
-          <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
-          <NavLink to="/products" className='breadcrumb green'><p><span className='gray'>&lt; </span>Dogs</p></NavLink>
-        </div>
-        <ImageSection 
-          item = {this.state.item} 
-          changeColor = {this.changeColor} 
-          selectedColor = {this.state.color}
-          changeSize = {this.changeSize}
-          selectedSize = {this.state.size}
-        />
-        <Information item={this.state.item} />
-      </div>
+      <CartConsumer>
+        {({ addToCart }) => (
+          <div className='content-breadcrumb-container'>
+            <div className='breadcrumb-row'>
+              <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
+              <NavLink to="/products" className='breadcrumb green'><p><span className='gray'>&lt; </span>Dogs</p></NavLink>
+            </div>
+            <ImageSection 
+              item = {this.state.item} 
+              changeColor = {this.changeColor} 
+              selectedColor = {this.state.color}
+              changeSize = {this.changeSize}
+              selectedSize = {this.state.size}
+              addToCart = {addToCart}
+              state = {this.state}
+            />
+            <Information item={this.state.item} />
+          </div>
+        )}
+      </CartConsumer>
     )
   }
 }

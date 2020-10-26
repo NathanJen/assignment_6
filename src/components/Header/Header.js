@@ -5,6 +5,7 @@ import Search from '../../assets/search.png'
 import Favorites from '../../assets/favorite.png'
 import Cart from '../../assets/cart.png'
 import User from '../../assets/user.png'
+import { CartConsumer } from '../../contexts/cart'
 
 function Nav() {
   return (
@@ -17,14 +18,19 @@ function Nav() {
   )
 }
 
-function Icons() {
+function Icons({ cart }) {
   return (
     <div>
       <ul className={styles.navLinks}>
-        <li><img src={Search} alt='search-icon' className={styles.navLink} /></li>
-        <li><NavLink to='./'><img src={Favorites} alt='favorites-icon' className={styles.navLink} /></NavLink></li>
-        <li><img src={Cart} alt='cart-icon' className={styles.navLink} /></li>
-        <li><NavLink to='/orders'><img src={User} alt='favorites-icon' className={styles.navLink} /></NavLink></li>
+        <li><img src={Search} alt='search-icon' className={styles.navIcon} /></li>
+        <li><NavLink to='./'><img src={Favorites} alt='favorites-icon' className={styles.navIcon} /></NavLink></li>
+        <li>
+          <div className={`${styles.navIcon} row`}>
+            <img src={Cart} alt='cart-icon' />
+            <p className={styles.cartCounter}>{`(${cart.length})`}</p>
+          </div>
+        </li>
+        <li><NavLink to='/orders'><img src={User} alt='favorites-icon' className={styles.navIcon} /></NavLink></li>
       </ul>
     </div>
   )
@@ -32,10 +38,14 @@ function Icons() {
 
 export default function Header() {
   return (
-    <header>
-      <NavLink to='./'><h1 className={`${styles.logo} green`}>Muddy Paws</h1></NavLink>
-      <Nav />
-      <Icons />
-    </header>
+    <CartConsumer>
+      {({ cart }) => (
+        <header>
+          <NavLink to='./'><h1 className={`${styles.logo} green`}>Muddy Paws</h1></NavLink>
+          <Nav />
+          <Icons cart={cart} />
+        </header>
+      )}
+    </CartConsumer>
   )
 }
