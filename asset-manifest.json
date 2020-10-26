@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/assignment_6/static/css/main.d4db4441.chunk.css",
+    "main.js": "/assignment_6/static/js/main.322602de.chunk.js",
+    "main.js.map": "/assignment_6/static/js/main.322602de.chunk.js.map",
+    "runtime-main.js": "/assignment_6/static/js/runtime-main.f3f93e40.js",
+    "runtime-main.js.map": "/assignment_6/static/js/runtime-main.f3f93e40.js.map",
+    "static/js/2.6b368ecd.chunk.js": "/assignment_6/static/js/2.6b368ecd.chunk.js",
+    "static/js/2.6b368ecd.chunk.js.map": "/assignment_6/static/js/2.6b368ecd.chunk.js.map",
+    "static/js/3.9bd8d3c5.chunk.js": "/assignment_6/static/js/3.9bd8d3c5.chunk.js",
+    "static/js/3.9bd8d3c5.chunk.js.map": "/assignment_6/static/js/3.9bd8d3c5.chunk.js.map",
+    "index.html": "/assignment_6/index.html",
+    "static/css/main.d4db4441.chunk.css.map": "/assignment_6/static/css/main.d4db4441.chunk.css.map",
+    "static/js/2.6b368ecd.chunk.js.LICENSE.txt": "/assignment_6/static/js/2.6b368ecd.chunk.js.LICENSE.txt",
+    "static/media/HeroImage.1e6ce63a.png": "/assignment_6/static/media/HeroImage.1e6ce63a.png",
+    "static/media/blackHarness.b0d6fc69.png": "/assignment_6/static/media/blackHarness.b0d6fc69.png",
+    "static/media/buckle.8d8efd03.png": "/assignment_6/static/media/buckle.8d8efd03.png",
+    "static/media/catCategory.6311ed6e.jpg": "/assignment_6/static/media/catCategory.6311ed6e.jpg",
+    "static/media/catHarness.8525eaa8.png": "/assignment_6/static/media/catHarness.8525eaa8.png",
+    "static/media/closeup.499e942d.png": "/assignment_6/static/media/closeup.499e942d.png",
+    "static/media/dogCategory.482d070b.jpg": "/assignment_6/static/media/dogCategory.482d070b.jpg",
+    "static/media/dogCloseup.ca35e363.png": "/assignment_6/static/media/dogCloseup.ca35e363.png",
+    "static/media/dogHarness.f4b4d1f4.png": "/assignment_6/static/media/dogHarness.f4b4d1f4.png",
+    "static/media/foodStorage.7ca3d92d.png": "/assignment_6/static/media/foodStorage.7ca3d92d.png",
+    "static/media/gpsCollar.330ed0e4.png": "/assignment_6/static/media/gpsCollar.330ed0e4.png",
+    "static/media/pinkHarness.7c675b45.png": "/assignment_6/static/media/pinkHarness.7c675b45.png",
+    "static/media/processed.8db2b183.png": "/assignment_6/static/media/processed.8db2b183.png",
+    "static/media/purpleHarness.01a26616.png": "/assignment_6/static/media/purpleHarness.01a26616.png",
+    "static/media/redHarness.a85b409f.png": "/assignment_6/static/media/redHarness.a85b409f.png",
+    "static/media/shipped.bfbfdb82.png": "/assignment_6/static/media/shipped.bfbfdb82.png",
+    "static/media/yorkie.481b68c4.png": "/assignment_6/static/media/yorkie.481b68c4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3f93e40.js",
+    "static/js/2.6b368ecd.chunk.js",
+    "static/css/main.d4db4441.chunk.css",
+    "static/js/main.322602de.chunk.js"
+  ]
+}
