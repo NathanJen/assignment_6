@@ -25,10 +25,12 @@ function Icons({ cart }) {
         <li><img src={Search} alt='search-icon' className={styles.navIcon} /></li>
         <li><NavLink to='./'><img src={Favorites} alt='favorites-icon' className={styles.navIcon} /></NavLink></li>
         <li>
-          <div className={`${styles.navIcon} row`}>
-            <img src={Cart} alt='cart-icon' />
-            <p className={styles.cartCounter}>{`(${cart.length})`}</p>
-          </div>
+          <NavLink to='/cart'>
+            <div className={`${styles.navIcon} row`}>
+              <img src={Cart} alt='cart-icon' />
+              <p className={styles.cartCounter}>{`(${cart.length})`}</p>
+            </div>
+          </NavLink>
         </li>
         <li><NavLink to='/orders'><img src={User} alt='favorites-icon' className={styles.navIcon} /></NavLink></li>
       </ul>

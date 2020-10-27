@@ -93,6 +93,7 @@ export default class ProductDetails extends React.Component {
       item: Items[id],
       color: "Strawberry",
       size: "Tiny",
+      quantity: 1,
     }
 
     this.changeColor = this.changeColor.bind(this)

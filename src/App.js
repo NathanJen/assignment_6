@@ -9,6 +9,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails'
 import Contact from './components/Contact/Contact'
 import Orders from './components/Orders/Orders'
 import { CartProvider } from './contexts/cart'
+import Cart from './components/Cart/Cart'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ export default class App extends React.Component {
             <Route exact path='/item' component={ProductDetails} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/orders' component={Orders} />
+            <Route exact path='/cart' component={Cart} />
           </Switch>
           <Footer />
         </div>

@@ -18,7 +18,7 @@ export default class Products extends React.Component {
       <div className='content-breadcrumb-container'>
         <NavLink to="./" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
         <div className='category-name-container'>
-          <h1 className={styles.categoryName}>Dogs</h1>
+          <h1 className="category-name">Dogs</h1>
         </div>
         <div className='row'>
           {Items.map((item, i) => <ItemCard item={item} key={i} />)}
