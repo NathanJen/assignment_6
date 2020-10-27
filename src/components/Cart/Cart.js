@@ -37,7 +37,8 @@ export default function Cart() {
               removeFromCart = {removeFromCart}
               index = {i}
               key = {i} 
-          />)}
+          />
+          )}
         </div>
       )}
     </CartConsumer>

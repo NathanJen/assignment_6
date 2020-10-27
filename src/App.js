@@ -39,12 +39,12 @@ export default class App extends React.Component {
         <div className="App">
           <Header />
           <Switch>
-            <Route exact path='/' component={Home} />
             <Route exact path='/products' component={Products} />
             <Route exact path='/item' component={ProductDetails} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/orders' component={Orders} />
             <Route exact path='/cart' component={Cart} />
+            <Route component={Home} />
           </Switch>
           <Footer />
         </div>
