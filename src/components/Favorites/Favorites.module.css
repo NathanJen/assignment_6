@@ -1,0 +1,30 @@
+.favCard {
+  width: 30%;
+}
+
+/* removes padding for last card */
+.favCard:not(:last-child) {
+  padding-right: 40px;
+}
+
+.favX {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.imgContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.itemImg {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}

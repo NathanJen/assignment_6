@@ -53,6 +53,8 @@
   position: absolute;
   top: 20px;
   right: 16px;
+  width: 8%;
+  cursor: pointer;
 }
 
 .bottomRight {
@@ -64,4 +66,28 @@
 .addToCart {
   width: 30px;
   height: 30px;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.pink {
+  background-color: #F8CCBD;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.purple {
+  background-color: #C2AFCE;
+}
+
+.red {
+  background-color: #D03B49;
 }
