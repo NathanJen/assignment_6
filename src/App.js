@@ -17,6 +17,8 @@ export default class App extends React.Component {
 
     this.state = {
       cart: [],
+      favorites: [],
+      orders: [],
       addToCart: (newItem) => {
         this.setState({
           cart: [newItem, ...this.state.cart],

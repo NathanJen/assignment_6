@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Products.module.css'
+// import styles from './Products.module.css'
 import { NavLink } from "react-router-dom"
 import Items from '../../shared/items'
 import ItemCard from '../ItemCard/ItemCard'
