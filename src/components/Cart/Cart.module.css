@@ -18,6 +18,17 @@
   justify-content: space-between;
 }
 
+.selectionRow {
+  display: flex;
+}
+
+select {
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  height: 35px;
+}
+
 .itemImg {
   width: 100%;
 }

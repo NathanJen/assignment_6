@@ -22,7 +22,7 @@ function Icons({ cart }) {
   return (
     <div>
       <ul className={styles.navLinks}>
-        <li><img src={Search} alt='search-icon' className={styles.navIcon} /></li>
+        {/* <li><img src={Search} alt='search-icon' className={styles.navIcon} /></li> */}
         <li><NavLink to='/favorites'><img src={Favorites} alt='favorites-icon' className={styles.navIcon} /></NavLink></li>
         <li>
           <NavLink to='/cart'>

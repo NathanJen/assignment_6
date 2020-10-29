@@ -33,6 +33,7 @@ export default class App extends React.Component {
           cart: newCart,
         })
       },
+      clearCart: () => this.setState({ cart: [] }),
       addToFavorites: (item) => {
         this.setState({ favorites: [item, ...this.state.favorites] })
       },
@@ -43,6 +44,14 @@ export default class App extends React.Component {
 
         this.setState({
           favorites: newFavs,
+        })
+      },
+      updateQuantity: (index, newQuantity) => {
+        const newCart = [...this.state.cart]
+        newCart[index].quantity = parseInt(newQuantity)
+
+        this.setState({
+          cart: newCart,
         })
       },
     }

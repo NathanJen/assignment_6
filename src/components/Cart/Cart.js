@@ -3,13 +3,13 @@ import styles from './Cart.module.css'
 import { CartConsumer } from '../../contexts/cart'
 import { NavLink } from "react-router-dom"
 import Edit from '../../assets/edit.png'
+import { quantities } from '../../shared/Utils'
 
-function CartItem ({item, removeFromCart, index}) {
+function CartItem ({item, removeFromCart, updateQuantity, index}) {
   const name = item.item.name
   const color = item.color
   const image = item.item.colors[color]
   const size = item.size
-  const quantity = item.quantity
 
   return (
     <div className={styles.detailsRow}>
@@ -20,7 +20,12 @@ function CartItem ({item, removeFromCart, index}) {
         <h2>{name}</h2>
         <p className={styles.body}>Color: {color}</p>
         <p className={styles.body}>Size: {size}</p>
-        <p className={styles.body}>Quantity: {quantity}</p>
+        <div className={styles.selectionRow}>
+          <p className={styles.body}>Quantity:</p>
+          <select value={item.quantity} onChange={(event) => updateQuantity(index, event.target.value)}>
+            {quantities.map((option, i) => <option key={i} value={option}>{option}</option>)}
+          </select>
+        </div>
         <p className={styles.remove} onClick={() => removeFromCart(index)}>Remove</p>
       </div>
       <div className={styles.priceContainer} >
@@ -30,7 +35,7 @@ function CartItem ({item, removeFromCart, index}) {
   )
 }
 
-function CheckoutDetails ({cart}) {
+function CheckoutDetails ({cart, clearCart}) {
   let subtotal = 0
   for (let i=0; i < cart.length; i++) {
     subtotal += cart[i].quantity * parseFloat(cart[i].item.price)
@@ -72,6 +77,7 @@ function CheckoutDetails ({cart}) {
       <NavLink to='/orders'>
         <button 
           className = {styles.cartBtn}
+          onClick = {() => clearCart()}
           // Add to orders context on click
         >
           Place Your Order
@@ -98,7 +104,7 @@ function CheckoutCard ({ title, content }) {
 export default function Cart() {
   return (
     <CartConsumer>
-      {({ cart, removeFromCart }) => (
+      {({ cart, removeFromCart, updateQuantity, clearCart }) => (
         <div className='content-breadcrumb-container'>
           <div className='breadcrumb-row'>
             <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
@@ -112,12 +118,16 @@ export default function Cart() {
                 <CartItem 
                   item = {item}
                   removeFromCart = {removeFromCart}
+                  updateQuantity = {updateQuantity}
                   index = {i}
                   key = {i} 
                 />
               )}
             </div>
-            <CheckoutDetails cart={cart} />
+            <CheckoutDetails 
+              cart={cart}
+              clearCart={clearCart}
+            />
           </div>
         </div>
       )}

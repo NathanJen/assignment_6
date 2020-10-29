@@ -25,7 +25,9 @@ export default class ItemCard extends React.Component {
             </div>
             <div className='row'>
               <div>
-                <p className={styles.itemName}>{this.props.item.name}</p>
+                <NavLink to='/item?id=0' className={styles.noUnderline}>
+                  <p className={styles.itemName}>{this.props.item.name}</p>
+                </NavLink>
                 <p className={`${styles.itemCategory} gray`}>{this.props.item.type}</p>
               </div>
               <div>
