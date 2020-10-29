@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Header.module.css'
 import { NavLink } from "react-router-dom"
-import Search from '../../assets/search.png'
+// import Search from '../../assets/search.png'
 import Favorites from '../../assets/favorite.png'
 import Cart from '../../assets/cart.png'
 import User from '../../assets/user.png'

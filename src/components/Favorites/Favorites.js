@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Favorites.module.css'
+// import styles from './Favorites.module.css'
 import { CartConsumer } from '../../contexts/cart'
 import { NavLink } from "react-router-dom"
 import ItemCard from '../ItemCard/ItemCard'
