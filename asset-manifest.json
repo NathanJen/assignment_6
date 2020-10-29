@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/assignment_6/static/css/main.cb842312.chunk.css",
-    "main.js": "/assignment_6/static/js/main.34290e18.chunk.js",
-    "main.js.map": "/assignment_6/static/js/main.34290e18.chunk.js.map",
+    "main.css": "/assignment_6/static/css/main.d00dc26e.chunk.css",
+    "main.js": "/assignment_6/static/js/main.0e5c2c62.chunk.js",
+    "main.js.map": "/assignment_6/static/js/main.0e5c2c62.chunk.js.map",
     "runtime-main.js": "/assignment_6/static/js/runtime-main.b2fcc57a.js",
     "runtime-main.js.map": "/assignment_6/static/js/runtime-main.b2fcc57a.js.map",
-    "static/js/2.d6a8d096.chunk.js": "/assignment_6/static/js/2.d6a8d096.chunk.js",
-    "static/js/2.d6a8d096.chunk.js.map": "/assignment_6/static/js/2.d6a8d096.chunk.js.map",
+    "static/js/2.7f100c6b.chunk.js": "/assignment_6/static/js/2.7f100c6b.chunk.js",
+    "static/js/2.7f100c6b.chunk.js.map": "/assignment_6/static/js/2.7f100c6b.chunk.js.map",
     "static/js/3.9a13f796.chunk.js": "/assignment_6/static/js/3.9a13f796.chunk.js",
     "static/js/3.9a13f796.chunk.js.map": "/assignment_6/static/js/3.9a13f796.chunk.js.map",
     "index.html": "/assignment_6/index.html",
-    "static/css/main.cb842312.chunk.css.map": "/assignment_6/static/css/main.cb842312.chunk.css.map",
-    "static/js/2.d6a8d096.chunk.js.LICENSE.txt": "/assignment_6/static/js/2.d6a8d096.chunk.js.LICENSE.txt",
+    "static/css/main.d00dc26e.chunk.css.map": "/assignment_6/static/css/main.d00dc26e.chunk.css.map",
+    "static/js/2.7f100c6b.chunk.js.LICENSE.txt": "/assignment_6/static/js/2.7f100c6b.chunk.js.LICENSE.txt",
     "static/media/HeroImage.1e6ce63a.png": "/assignment_6/static/media/HeroImage.1e6ce63a.png",
-    "static/media/blackHarness.b0d6fc69.png": "/assignment_6/static/media/blackHarness.b0d6fc69.png",
+    "static/media/blackHarness.33835a44.png": "/assignment_6/static/media/blackHarness.33835a44.png",
     "static/media/buckle.8d8efd03.png": "/assignment_6/static/media/buckle.8d8efd03.png",
     "static/media/catCategory.6311ed6e.jpg": "/assignment_6/static/media/catCategory.6311ed6e.jpg",
     "static/media/catHarness.8525eaa8.png": "/assignment_6/static/media/catHarness.8525eaa8.png",
@@ -23,17 +23,17 @@
     "static/media/dogHarness.f4b4d1f4.png": "/assignment_6/static/media/dogHarness.f4b4d1f4.png",
     "static/media/foodStorage.7ca3d92d.png": "/assignment_6/static/media/foodStorage.7ca3d92d.png",
     "static/media/gpsCollar.330ed0e4.png": "/assignment_6/static/media/gpsCollar.330ed0e4.png",
-    "static/media/pinkHarness.7c675b45.png": "/assignment_6/static/media/pinkHarness.7c675b45.png",
+    "static/media/pinkHarness.92ab2f62.png": "/assignment_6/static/media/pinkHarness.92ab2f62.png",
     "static/media/processed.8db2b183.png": "/assignment_6/static/media/processed.8db2b183.png",
-    "static/media/purpleHarness.01a26616.png": "/assignment_6/static/media/purpleHarness.01a26616.png",
-    "static/media/redHarness.a85b409f.png": "/assignment_6/static/media/redHarness.a85b409f.png",
+    "static/media/purpleHarness.5b56e53a.png": "/assignment_6/static/media/purpleHarness.5b56e53a.png",
+    "static/media/redHarness.0d2aeee7.png": "/assignment_6/static/media/redHarness.0d2aeee7.png",
     "static/media/shipped.bfbfdb82.png": "/assignment_6/static/media/shipped.bfbfdb82.png",
     "static/media/yorkie.481b68c4.png": "/assignment_6/static/media/yorkie.481b68c4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b2fcc57a.js",
-    "static/js/2.d6a8d096.chunk.js",
-    "static/css/main.cb842312.chunk.css",
-    "static/js/main.34290e18.chunk.js"
+    "static/js/2.7f100c6b.chunk.js",
+    "static/css/main.d00dc26e.chunk.css",
+    "static/js/main.0e5c2c62.chunk.js"
   ]
 }
