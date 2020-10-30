@@ -8,6 +8,20 @@ import { getFirstImage } from '../../shared/Utils'
 import { CartConsumer } from '../../contexts/cart'
 
 export default class ItemCard extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      image: getFirstImage(this.props.item)
+    }
+  }
+
+  changePhoto = (color) => {
+    if (this.props.item.colors) {
+      this.props.item.colors[color] && this.setState({ image: this.props.item.colors[color] })
+    }
+  }
+
   render() {
     return (
       <CartConsumer>
@@ -15,7 +29,7 @@ export default class ItemCard extends React.Component {
           <div className={styles.itemCard}>
             <div className={styles.heroContainer}>
               <NavLink to='/item?id=0' >
-                <img src={getFirstImage(this.props.item)} alt='item' className={styles.categoryImg} />
+                <img src={this.state.image} alt='item' className={styles.categoryImg} />
               </NavLink>
               {favorites.includes(this.props.item)
                 ? <img className={styles.topRight} src={FilledFavorites} alt="Favorites Heart" onClick={() => removeFromFavorites(this.props.item)} />
@@ -32,14 +46,12 @@ export default class ItemCard extends React.Component {
               </div>
               <div>
                 <div>
-                  <div>
-                    <span className={`${styles.circle} ${styles.pink}`}></span>
-                    <span className={`${styles.circle} ${styles.black}`}></span>
-                  </div>
-                  <div>
-                    <span className={`${styles.circle} ${styles.purple}`}></span>
-                    <span className={`${styles.circle} ${styles.red}`}></span>              
-                  </div>
+                  <span className={`${styles.circle} ${styles.pink}`} onClick={() => this.changePhoto("Strawberry")}></span>
+                  <span className={`${styles.circle} ${styles.black}`} onClick={() => this.changePhoto("Blackberry")}></span>
+                </div>
+                <div>
+                  <span className={`${styles.circle} ${styles.purple}`} onClick={() => this.changePhoto("Crazyberry")}></span>
+                  <span className={`${styles.circle} ${styles.red}`} onClick={() => this.changePhoto("Fire Orange")}></span>              
                 </div>
               </div>
             </div>

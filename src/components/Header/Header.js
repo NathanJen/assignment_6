@@ -6,6 +6,7 @@ import Favorites from '../../assets/favorite.png'
 import Cart from '../../assets/cart.png'
 import User from '../../assets/user.png'
 import { CartConsumer } from '../../contexts/cart'
+import { getItemsCount } from '../../shared/Utils'
 
 function Nav() {
   return (
@@ -28,7 +29,7 @@ function Icons({ cart }) {
           <NavLink to='/cart'>
             <div className={`${styles.navIcon} row`}>
               <img src={Cart} alt='cart-icon' />
-              <p className={styles.cartCounter}>{`(${cart.length})`}</p>
+              <p className={styles.cartCounter}>{`(${getItemsCount(cart)})`}</p>
             </div>
           </NavLink>
         </li>

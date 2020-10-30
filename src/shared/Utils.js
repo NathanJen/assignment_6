@@ -7,3 +7,11 @@ export const getFirstImage = (shirt) => {
 
   return shirt.colors[firstColor]
 }
+
+export const getItemsCount = (cart) => {
+  let itemsCount = 0
+  for (let i=0; i<cart.length; i++) {
+    itemsCount += parseInt(cart[i].quantity)
+  }
+  return itemsCount
+}

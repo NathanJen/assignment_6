@@ -3,7 +3,7 @@ import styles from './Cart.module.css'
 import { CartConsumer } from '../../contexts/cart'
 import { NavLink } from "react-router-dom"
 import Edit from '../../assets/edit.png'
-import { quantities } from '../../shared/Utils'
+import { quantities, getItemsCount } from '../../shared/Utils'
 
 function CartItem ({item, removeFromCart, updateQuantity, index}) {
   const name = item.item.name
@@ -110,7 +110,7 @@ export default function Cart() {
             <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
           </div>
           <div className='category-name-container'>
-            <h1 className="category-name">Your Cart {`(${cart.length})`}</h1>
+            <h1 className="category-name">Your Cart {`(${getItemsCount(cart)})`}</h1>
           </div>
           <div className={styles.cartRow}>
             <div className={styles.itemCol}>
