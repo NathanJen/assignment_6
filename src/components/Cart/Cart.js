@@ -3,13 +3,12 @@ import styles from './Cart.module.css'
 import { CartConsumer } from '../../contexts/cart'
 import { NavLink } from "react-router-dom"
 import Edit from '../../assets/edit.png'
-import { quantities, getItemsCount } from '../../shared/Utils'
+import { quantities, getItemsCount, sizes, colors } from '../../shared/Utils'
 
-function CartItem ({item, removeFromCart, updateQuantity, index}) {
+function CartItem ({item, removeFromCart, updateQuantity, updateColor, updateSize, index}) {
   const name = item.item.name
   const color = item.color
   const image = item.item.colors[color]
-  const size = item.size
 
   return (
     <div className={styles.detailsRow}>
@@ -18,8 +17,18 @@ function CartItem ({item, removeFromCart, updateQuantity, index}) {
       </div>
       <div className={styles.detailContainer} >
         <h2>{name}</h2>
-        <p className={styles.body}>Color: {color}</p>
-        <p className={styles.body}>Size: {size}</p>
+        <div className={styles.selectionRow}>
+          <p className={styles.body}>Color:</p>
+          <select value={item.color} onChange={(event) => updateColor(index, event.target.value)}>
+            {colors.map((option, i) => <option key={i} value={option}>{option}</option>)}
+          </select>
+        </div>
+        <div className={styles.selectionRow}>
+          <p className={styles.body}>Size:</p>
+          <select value={item.size} onChange={(event) => updateSize(index, event.target.value)}>
+            {sizes.map((option, i) => <option key={i} value={option}>{option}</option>)}
+          </select>
+        </div>
         <div className={styles.selectionRow}>
           <p className={styles.body}>Quantity:</p>
           <select value={item.quantity} onChange={(event) => updateQuantity(index, event.target.value)}>
@@ -104,7 +113,7 @@ function CheckoutCard ({ title, content }) {
 export default function Cart() {
   return (
     <CartConsumer>
-      {({ cart, removeFromCart, updateQuantity, clearCart }) => (
+      {({ cart, removeFromCart, updateQuantity, clearCart, updateColor, updateSize }) => (
         <div className='content-breadcrumb-container'>
           <div className='breadcrumb-row'>
             <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
@@ -119,6 +128,8 @@ export default function Cart() {
                   item = {item}
                   removeFromCart = {removeFromCart}
                   updateQuantity = {updateQuantity}
+                  updateColor = {updateColor}
+                  updateSize = {updateSize}
                   index = {i}
                   key = {i} 
                 />

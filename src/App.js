@@ -54,6 +54,23 @@ export default class App extends React.Component {
           cart: newCart,
         })
       },
+      updateColor: (index, newColor) => {
+        const newCart = [...this.state.cart]
+        newCart[index].color = newColor
+        newCart[index].image = newCart[index].item.colors[newColor]
+
+        this.setState({
+          cart: newCart,
+        })        
+      },
+      updateSize: (index, newSize) => {
+        const newCart = [...this.state.cart]
+        newCart[index].size = newSize
+
+        this.setState({
+          cart: newCart,
+        })
+      },
     }
   }
 
