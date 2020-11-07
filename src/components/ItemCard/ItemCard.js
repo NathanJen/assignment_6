@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom"
 import Favorites from '../../assets/emptyHeart.png'
 import FilledFavorites from '../../assets/filledHeart.png'
 import AddToCart from '../../assets/add-to-cart.png'
-import { getFirstImage } from '../../shared/Utils'
 import { CartConsumer } from '../../contexts/cart'
 
 export default class ItemCard extends React.Component {
@@ -12,14 +11,14 @@ export default class ItemCard extends React.Component {
     super(props)
 
     this.state = {
-      image: getFirstImage(this.props.item)
+      color: "Strawberry"
     }
   }
 
   changePhoto = (color) => {
-    if (this.props.item.colors) {
-      this.props.item.colors[color] && this.setState({ image: this.props.item.colors[color] })
-    }
+    this.setState({
+      color: color,
+    })
   }
 
   render() {
@@ -29,7 +28,8 @@ export default class ItemCard extends React.Component {
           <div className={styles.itemCard}>
             <div className={styles.heroContainer}>
               <NavLink to='/item?id=0' >
-                <img src={this.state.image} alt='item' className={styles.categoryImg} />
+                {/* <img src={this.props.item.colors[this.state.color]} alt='item' className={styles.categoryImg} /> */}
+                <img src={this.props.item.colors['Strawberry']} alt='item' className={styles.categoryImg} />
               </NavLink>
               {favorites.includes(this.props.item)
                 ? <img className={styles.topRight} src={FilledFavorites} alt="Favorites Heart" onClick={() => removeFromFavorites(this.props.item)} />

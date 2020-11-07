@@ -5,6 +5,7 @@ import { sizes } from '../../shared/Utils'
 import queryString from 'query-string'
 import Items from '../../shared/items'
 import { CartConsumer } from '../../contexts/cart'
+import Carousel from '../Carousel/Carousel'
 
 function CloseUps ({item, photos}) {
   return (
@@ -131,6 +132,7 @@ export default class ProductDetails extends React.Component {
               state = {this.state}
             />
             <Information item={this.state.item} />
+            <Carousel />
           </div>
         )}
       </CartConsumer>

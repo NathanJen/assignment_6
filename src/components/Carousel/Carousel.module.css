@@ -1,0 +1,38 @@
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 40px;
+}
+
+.arrowBtn {
+  width: 4%;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.arrowBtn:first-child {
+  margin-right: 40px;
+  transform: rotate(180deg);
+}
+
+.arrowBtn:last-child {
+  float: right;
+}
+
+.arrowImg {
+  width: 100%;
+}
+
+.disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.itemRow {
+  display: flex;
+  width: 90%;
+}
