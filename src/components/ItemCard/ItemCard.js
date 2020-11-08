@@ -36,12 +36,15 @@ export default class ItemCard extends React.Component {
                 ? <img className={styles.topRight} src={FilledFavorites} alt="Favorites Heart" onClick={() => removeFromFavorites(this.props.item)} />
                 : <img className={styles.topRight} src={Favorites} alt="Favorites Heart" onClick={() => addToFavorites(this.props.item)} />
               }
-              <img 
-                src={AddToCart} 
-                alt='add-to-cart-icon' 
-                className={`${styles.bottomRight} ${styles.addToCart}`} 
-                onClick={() => this.props.openModal(Items[0])}
-              />
+              {this.props.openModal
+                ? <img 
+                    src={AddToCart} 
+                    alt='add-to-cart-icon' 
+                    className={`${styles.bottomRight} ${styles.addToCart}`} 
+                    onClick={() => this.props.openModal(Items[0])}
+                  />
+                : null
+              }
             </div>
             <div className='row'>
               <div>

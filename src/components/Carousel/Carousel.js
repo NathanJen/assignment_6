@@ -39,7 +39,7 @@ export default class Carousel extends React.Component {
             <img src={Arrow} className={styles.arrowImg} alt='Carousel arrow' />
           </button>
           <div className={styles.itemRow}>
-            {this.state.pageItems.map((item, i) => <ItemCard item={item} key={i} />)}
+            {this.state.pageItems.map((item, i) => <ItemCard item={item} key={i} openModal={null} />)}
           </div>
           <button 
             className={(this.state.startIndex === Items.length - 1 )? `${styles.arrowBtn} ${styles.disabled}` : styles.arrowBtn}
