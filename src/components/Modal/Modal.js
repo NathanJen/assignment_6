@@ -18,6 +18,17 @@ export default class Modal extends React.Component {
     this.changeSize = this.changeSize.bind(this)
   }
 
+  componentDidUpdate(prevProps) {
+    const productMatch = (this.props.item === prevProps.item)
+
+    if (!productMatch) {
+      this.setState({ 
+        color: "Strawberry",
+        size: "Tiny",
+      })
+    }
+  }
+
   changeColor(color) {
     this.setState({
       color: color
