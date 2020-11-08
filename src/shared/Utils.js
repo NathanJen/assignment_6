@@ -29,3 +29,7 @@ export const getFilteredItems = (category) => {
 
   return filteredItems
 }
+
+export const getItemIndex = (item) => {
+  return Items.indexOf(item)
+}

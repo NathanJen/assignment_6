@@ -26,7 +26,7 @@ function ImageSection ({item, changeColor, selectedColor, changeSize, selectedSi
     <div className='row'>
       <div className={styles.itemImgContainer}>
         <img src={item.colors[selectedColor]} alt='Large Harness' className={styles.itemImg} />
-        <CloseUps item={item} photos={item.closeups} />
+        {item.closeups ? <CloseUps item={item} photos={item.closeups} /> : null}
       </div>
       <div className={styles.itemDetailsContainer}>
         <div className='row'>
@@ -85,6 +85,28 @@ export default class ProductDetails extends React.Component {
 
     this.changeColor = this.changeColor.bind(this)
     this.changeSize = this.changeSize.bind(this)
+  }
+
+  componentDidMount() {
+    const { id } = queryString.parse(this.props.location.search)
+
+    this.setState({ 
+      item: Items[id],
+    })
+  }
+
+  componentDidUpdate(prevProps) {
+    const urlMatch = queryString.parse(this.props.location.search).id === queryString.parse(prevProps.location.search).id
+
+    if (!urlMatch) {
+      const { id } = queryString.parse(this.props.location.search)
+
+      this.setState({ 
+        item: Items[id],
+        color: "Strawberry",
+        size: "Tiny",
+      })
+    }
   }
 
   changeColor(color) {

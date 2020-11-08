@@ -16,9 +16,6 @@ export default class Products extends React.Component {
       selectedItem: null,
     }
 
-    const { category } = queryString.parse(this.props.location.search)
-    console.log(getFilteredItems(category))
-
     this.openModal = this.openModal.bind(this)
     this.closeModal = this.closeModal.bind(this)
     this.renderModal = this.renderModal.bind(this)
@@ -32,7 +29,7 @@ export default class Products extends React.Component {
     })
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     const urlMatch = queryString.parse(this.props.location.search).category === queryString.parse(prevProps.location.search).category
 
     if (!urlMatch) {

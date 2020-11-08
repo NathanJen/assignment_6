@@ -6,6 +6,7 @@ import FilledFavorites from '../../assets/filledHeart.png'
 import AddToCart from '../../assets/add-to-cart.png'
 import { CartConsumer } from '../../contexts/cart'
 import Items from '../../shared/items'
+import { getItemIndex } from '../../shared/Utils'
 
 export default class ItemCard extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class ItemCard extends React.Component {
         {({ favorites, addToFavorites, removeFromFavorites }) => (
           <div className={styles.itemCard}>
             <div className={styles.heroContainer}>
-              <NavLink to='/item?id=0' >
+              <NavLink to={`/item?id=${getItemIndex(this.props.item)}`} >
                 {/* <img src={this.props.item.colors[this.state.color]} alt='item' className={styles.categoryImg} /> */}
                 <img src={this.props.item.colors['Strawberry']} alt='item' className={styles.categoryImg} />
               </NavLink>
