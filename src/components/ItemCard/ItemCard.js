@@ -5,6 +5,7 @@ import Favorites from '../../assets/emptyHeart.png'
 import FilledFavorites from '../../assets/filledHeart.png'
 import AddToCart from '../../assets/add-to-cart.png'
 import { CartConsumer } from '../../contexts/cart'
+import Items from '../../shared/items'
 
 export default class ItemCard extends React.Component {
   constructor(props) {
@@ -35,7 +36,12 @@ export default class ItemCard extends React.Component {
                 ? <img className={styles.topRight} src={FilledFavorites} alt="Favorites Heart" onClick={() => removeFromFavorites(this.props.item)} />
                 : <img className={styles.topRight} src={Favorites} alt="Favorites Heart" onClick={() => addToFavorites(this.props.item)} />
               }
-              <img src={AddToCart} alt='add-to-cart-icon' className={`${styles.bottomRight} ${styles.addToCart}`} />
+              <img 
+                src={AddToCart} 
+                alt='add-to-cart-icon' 
+                className={`${styles.bottomRight} ${styles.addToCart}`} 
+                onClick={() => this.props.openModal(Items[0])}
+              />
             </div>
             <div className='row'>
               <div>
