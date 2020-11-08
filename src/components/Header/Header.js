@@ -12,8 +12,8 @@ function Nav() {
   return (
     <nav>
       <ul className={styles.navLinks}>
-        <li><NavLink to='/products'><p className={styles.navLink}>Cats</p></NavLink></li>
-        <li><NavLink to='/products'><p className={styles.navLink}>Dogs</p></NavLink></li>
+        <li><NavLink to='/products?category=cat'><p className={styles.navLink}>Cats</p></NavLink></li>
+        <li><NavLink to='/products?category=dog'><p className={styles.navLink}>Dogs</p></NavLink></li>
       </ul>
     </nav>
   )

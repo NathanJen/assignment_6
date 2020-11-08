@@ -44,8 +44,8 @@ export default function Home () {
       <Hero image={HeroImage} />
       <CategoryContainer name="Category">
         <div className='row'>
-          <CategoryCard imageSrc={CatCategoryImg} name="Cats" path="/products" />
-          <CategoryCard imageSrc={DogCategoryImg} name="Dogs" path="/products" />
+          <CategoryCard imageSrc={CatCategoryImg} name="Cats" path='/products?category=cat' />
+          <CategoryCard imageSrc={DogCategoryImg} name="Dogs" path='/products?category=dog' />
         </div>
       </CategoryContainer>
       <CategoryContainer name="Trending">
