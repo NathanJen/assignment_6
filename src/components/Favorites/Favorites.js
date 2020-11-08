@@ -52,7 +52,7 @@ export default class Favorites extends React.Component {
             <div className='category-name-container'>
               <h1 className='category-name'>My Favorites</h1>
             </div>
-            <div className='row'>
+            <div className='startRow'>
               {favorites.map((item, i) => 
                 <ItemCard 
                   item={item}

@@ -50,7 +50,7 @@ export default function Home () {
       </CategoryContainer>
       <CategoryContainer name="Trending">
         <div className='row'>
-          {Items.map((item, i) => <ItemCard item={item} key={i} />)}
+          {Items.slice(0, 4).map((item, i) => <ItemCard item={item} key={i} />)}
         </div>
       </CategoryContainer>
     </React.Fragment>

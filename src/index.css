@@ -19,6 +19,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.startRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;  
 }
 
 .customers-row {

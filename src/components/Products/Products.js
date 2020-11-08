@@ -50,7 +50,7 @@ export default class Products extends React.Component {
         <div className='category-name-container'>
           <h1 className="category-name">Dogs</h1>
         </div>
-        <div className='row'>
+        <div className='startRow'>
           {Items.map((item, i) => 
             <ItemCard 
               item={item}

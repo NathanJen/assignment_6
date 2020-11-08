@@ -14,6 +14,10 @@ import CatHarness from '../assets/catHarness.png'
 import GPSCollar from '../assets/gpsCollar.png'
 // Food Storage
 import FoodStorage from '../assets/foodStorage.png'
+// Water Storage
+import WaterStorage from '../assets/waterStorage.png'
+// Cat Backpack
+import CatBackpack from '../assets/catBackpack.png'
 
 let Items = [
 {
@@ -78,6 +82,38 @@ let Items = [
   "details": "",
   "colors": {
     "Strawberry": FoodStorage,
+    "Blackberry": "",
+    "Crazyberry": "",
+    "Fire Orange": "",
+  },
+  "specs": {
+    "materials": "Soft stretch poly base, woven nylon straps, coated carbon steel D-rings."
+  }
+},
+{
+  "name": "Water Storage",
+  "type": "Harness Attachment",
+  "category": "accessories",
+  "price": 10,
+  "details": "",
+  "colors": {
+    "Strawberry": WaterStorage,
+    "Blackberry": "",
+    "Crazyberry": "",
+    "Fire Orange": "",
+  },
+  "specs": {
+    "materials": "Soft stretch poly base, woven nylon straps, coated carbon steel D-rings."
+  }
+},
+{
+  "name": "Cat Backpack",
+  "type": "Backpack",
+  "category": "accessories",
+  "price": 60,
+  "details": "",
+  "colors": {
+    "Strawberry": CatBackpack,
     "Blackberry": "",
     "Crazyberry": "",
     "Fire Orange": "",
