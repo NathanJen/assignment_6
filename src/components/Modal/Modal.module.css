@@ -36,4 +36,30 @@
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: -2%;
+  margin-right: -1%;
+}
+
+.itemName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 29px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.itemCategory {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 22px;
+}
+
+.itemPrice {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 29px;
+  margin-top: 20px;
 }
