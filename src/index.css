@@ -82,3 +82,38 @@
   display: flex;
   margin-bottom: 30px;
 }
+
+.cartBtn {
+  margin-top: 40px;
+  padding: 20px;
+  border: none;
+  background-color: #96D231;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  border-radius: 30px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.imgContainer {
+  width: 40%
+}
+
+.img {
+  width: 100%;
+}
+
+.contentContainer {
+  width: 55%
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}

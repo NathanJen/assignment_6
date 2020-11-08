@@ -17,3 +17,23 @@
   overflow: scroll;
   border-radius: 10px;
 }
+
+.imgContainer {
+  width: 40%
+}
+
+.img {
+  width: 100%;
+}
+
+.contentContainer {
+  width: 55%
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}

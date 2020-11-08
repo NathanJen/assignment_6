@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './ProductDetails.module.css'
 import { NavLink } from "react-router-dom"
-import { sizes } from '../../shared/Utils'
 import queryString from 'query-string'
 import Items from '../../shared/items'
 import { CartConsumer } from '../../contexts/cart'
 import Carousel from '../Carousel/Carousel'
+import SizeSelection from './SizeSelection'
+import ColorSelection from './ColorSelection'
 
 function CloseUps ({item, photos}) {
   return (
@@ -33,30 +34,15 @@ function ImageSection ({item, changeColor, selectedColor, changeSize, selectedSi
           <h1 className={`${styles.itemDetailName} green`}>{`$${item.price}`}</h1>
         </div>
         <h2 className={styles.category}>{item.type}</h2>
-        <h2 className={styles.optionName}>Color:</h2>
-        <div className='row'>
-          {Object.keys(item.colors).map((color, i) => 
-            <div className={styles.colorBox} key={i} onClick={() => changeColor(color)}>
-              <img 
-                src={item.colors[color]} 
-                alt='harness colors' 
-                className={color === selectedColor ? `${styles.itemImg} ${styles.selected}` : styles.itemImg} 
-              />
-            </div>)
-          }
-        </div>
-        <h2 className={styles.optionName}>Size:</h2>
-        <div className='row'>
-          {sizes.map((size, i) => 
-            <div 
-              className={size === selectedSize ? `${styles.sizeContainer} ${styles.selected}` : styles.sizeContainer}
-              key={i} 
-              onClick={() => changeSize(size)}
-            >
-              <p className={styles.size} >{size}</p>
-            </div>)
-          }
-        </div>
+        <ColorSelection 
+          item = {item}
+          selectedColor = {selectedColor}
+          changeColor = {changeColor}
+        />
+        <SizeSelection 
+          selectedSize = {selectedSize}
+          changeSize = {changeSize}
+        />
         <button 
           className = {styles.cartBtn}
           onClick = {() => addToCart(state)}
