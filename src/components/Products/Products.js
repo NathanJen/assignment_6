@@ -60,6 +60,7 @@ export default class Products extends React.Component {
         <Modal 
           showModal = {this.state.showModal} 
           closeModal = {this.closeModal} 
+          item = {this.state.selectedItem}
         />
       )
     }

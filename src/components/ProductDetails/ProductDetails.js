@@ -128,7 +128,7 @@ export default class ProductDetails extends React.Component {
           <div className='content-breadcrumb-container'>
             <div className='breadcrumb-row'>
               <NavLink to="/" className='breadcrumb green'><p><span className='gray'>&lt; </span>Home</p></NavLink>
-              <NavLink to="/products" className='breadcrumb green'><p><span className='gray'>&lt; </span>Dogs</p></NavLink>
+              <NavLink to="/products?category=dog" className='breadcrumb green'><p><span className='gray'>&lt; </span>Dogs</p></NavLink>
             </div>
             <ImageSection 
               item = {this.state.item} 

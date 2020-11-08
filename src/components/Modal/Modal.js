@@ -1,6 +1,5 @@
 import React from "react";
 import styles from './Modal.module.css'
-import Items from '../../shared/items'
 import AddToCart from './AddToCart'
 
 
@@ -9,7 +8,7 @@ export default class Modal extends React.Component {
     super(props)
 
     this.state = {
-      item: Items[0],
+      item: this.props.item,
       color: "Strawberry",
       quantity: 1,
       size: "Tiny",
@@ -39,7 +38,7 @@ export default class Modal extends React.Component {
             <div className={styles.close} onClick={() => this.props.closeModal()}>&times;</div>
             <AddToCart
               closeModal={this.props.closeModal}
-              selectedItem={this.state.item}
+              selectedItem={this.props.item}
               selectedColor={this.state.color}
               selectedSize={this.state.size}
               changeColor={this.changeColor}

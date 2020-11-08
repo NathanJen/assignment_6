@@ -5,7 +5,6 @@ import Favorites from '../../assets/emptyHeart.png'
 import FilledFavorites from '../../assets/filledHeart.png'
 import AddToCart from '../../assets/add-to-cart.png'
 import { CartConsumer } from '../../contexts/cart'
-import Items from '../../shared/items'
 import { getItemIndex } from '../../shared/Utils'
 
 export default class ItemCard extends React.Component {
@@ -42,7 +41,7 @@ export default class ItemCard extends React.Component {
                     src={AddToCart} 
                     alt='add-to-cart-icon' 
                     className={`${styles.bottomRight} ${styles.addToCart}`} 
-                    onClick={() => this.props.openModal(Items[0])}
+                    onClick={() => this.props.openModal(this.props.item)}
                   />
                 : null
               }
