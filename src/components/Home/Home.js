@@ -6,6 +6,7 @@ import CatCategoryImg from '../../assets/catCategory.jpg'
 import DogCategoryImg from '../../assets/dogCategory.jpg'
 import ItemCard from '../ItemCard/ItemCard'
 import Items from '../../shared/items'
+import Modal from '../Modal/Modal'
 
 function Hero ({ image }) {
   return (
@@ -38,21 +39,68 @@ function CategoryCard ({ imageSrc, name, path }) {
 }
 
 
-export default function Home () {
-  return (
-    <React.Fragment>
-      <Hero image={HeroImage} />
-      <CategoryContainer name="Category">
-        <div className='row'>
-          <CategoryCard imageSrc={CatCategoryImg} name="Cats" path='/products?category=cat' />
-          <CategoryCard imageSrc={DogCategoryImg} name="Dogs" path='/products?category=dog' />
-        </div>
-      </CategoryContainer>
-      <CategoryContainer name="Trending">
-        <div className='row'>
-          {Items.slice(0, 4).map((item, i) => <ItemCard item={item} key={i} />)}
-        </div>
-      </CategoryContainer>
-    </React.Fragment>
-  )
+export default class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      showModal: false,
+      selectedItem: null,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+    this.renderModal = this.renderModal.bind(this)
+  }
+
+  openModal = (item) => {
+    this.setState({
+      showModal: true,
+      selectedItem: item,
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      showModal: false
+    })
+  }
+
+  renderModal = () => {
+    if (this.state.selectedItem) {
+      return (
+        <Modal 
+          showModal = {this.state.showModal} 
+          closeModal = {this.closeModal} 
+          item = {this.state.selectedItem}
+        />
+      )
+    }
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Hero image={HeroImage} />
+        <CategoryContainer name="Category">
+          <div className='row'>
+            <CategoryCard imageSrc={CatCategoryImg} name="Cats" path='/products?category=cat' />
+            <CategoryCard imageSrc={DogCategoryImg} name="Dogs" path='/products?category=dog' />
+          </div>
+        </CategoryContainer>
+        <CategoryContainer name="Trending">
+          <div className='row'>
+            {Items.slice(0, 4).map((item, i) => 
+              <ItemCard 
+                item={item}
+                openModal={this.openModal}
+                key={i} 
+              />
+            )}
+          </div>
+        </CategoryContainer>
+        {this.renderModal()}
+      </React.Fragment>
+    )
+  }
 }

@@ -33,3 +33,7 @@ export const getFilteredItems = (category) => {
 export const getItemIndex = (item) => {
   return Items.indexOf(item)
 }
+
+export const capitalize = (word) => {
+  return word[0].toUpperCase() + word.substr(1)
+}
