@@ -37,7 +37,8 @@ export default class Favorites extends React.Component {
       return (
         <Modal 
           showModal = {this.state.showModal} 
-          closeModal = {this.closeModal} 
+          closeModal = {this.closeModal}
+          item = {this.state.selectedItem}
         />
       )
     }

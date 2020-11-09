@@ -53,7 +53,7 @@ export default class ItemCard extends React.Component {
                 </NavLink>
                 <p className={`${styles.itemCategory} gray`}>{this.props.item.type}</p>
               </div>
-              <div>
+              {/* <div>
                 <div>
                   <span className={`${styles.circle} ${styles.pink}`} onClick={() => this.changePhoto("Strawberry")}></span>
                   <span className={`${styles.circle} ${styles.black}`} onClick={() => this.changePhoto("Blackberry")}></span>
@@ -62,7 +62,7 @@ export default class ItemCard extends React.Component {
                   <span className={`${styles.circle} ${styles.purple}`} onClick={() => this.changePhoto("Crazyberry")}></span>
                   <span className={`${styles.circle} ${styles.red}`} onClick={() => this.changePhoto("Fire Orange")}></span>              
                 </div>
-              </div>
+              </div> */}
             </div>
             <p className={`${styles.itemPrice} green`}>{`$${this.props.item.price}`}</p>
           </div>

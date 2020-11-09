@@ -121,7 +121,7 @@ let Items = [
   }
 },
 {
-  "name": "Travel Backpack",
+  "name": "Pet Backpack",
   "type": "Backpack",
   "category": "accessories",
   "price": 60,

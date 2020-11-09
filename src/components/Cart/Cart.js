@@ -85,9 +85,9 @@ function CheckoutDetails ({cart, clearCart}) {
       </div>
       <NavLink to='/orders'>
         <button 
-          className = {styles.cartBtn}
+          className = {cart.length === 0 ? `${styles.cartBtn} ${styles.disabled}` : styles.cartBtn}
           onClick = {() => clearCart()}
-          // Add to orders context on click
+          disabled = {cart.length === 0}
         >
           Place Your Order
         </button>

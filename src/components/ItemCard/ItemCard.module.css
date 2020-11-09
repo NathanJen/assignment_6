@@ -1,12 +1,7 @@
 .itemCard {
-  width: 20%;
+  width: 21%;
   text-decoration: none;
-  margin: 0 1% 50px 1%;
-}
-
-/* removes padding for last card */
-.itemCard:not(:last-child) {
-  padding-right: 40px;
+  margin: 0 2% 50px 2%;
 }
 
 .itemName {
